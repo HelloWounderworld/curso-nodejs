@@ -2,10 +2,13 @@
   "name": "portal_noticias",
   "version": "1.0.0",
   "description": "Site de Noticias",
-  "main": "index.js",
+  "main": "noticias.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Leonardo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
