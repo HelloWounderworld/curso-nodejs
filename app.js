@@ -1,3 +1,4 @@
+// Instalei o Nodemon. Rode no terminal: nodemon app
 let express = require('express');
 let app = express();
 
