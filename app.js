@@ -1,21 +1,11 @@
-// Instalei o Nodemon. Rode no terminal: nodemon app
-let express = require('express');
-let app = express();
+let app = require('./config/server');
 
-app.set('view engine', 'ejs');
+let rotaNoticias = require('./app/routes/noticias')(app);
 
-app.get('/', function(req, res) {
-    res.render("home/index");
-});
+let rotaHome = require('./app/routes/home')(app);
 
-app.get('/formulario_inclusao_noticia', function(req, res) {
-    res.render("admin/form_add_noticia");
-});
-
-app.get('/noticia', function(req, res) {
-    res.render("noticias/noticias");
-});
+let rotaFormInclusaoNoticia = require('./app/routes/form_inclusao_noticia')(app);
 
 app.listen(3000, function(){
-    console.log("Servidor rodando com express!");
+    console.log('Servidor ON');
 });
